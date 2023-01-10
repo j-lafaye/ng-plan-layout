@@ -1,0 +1,59 @@
+:host {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 0;
+  display: block;
+  overflow: hidden;
+}
+
+.app-plan-layout-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.app-plan-layout-image-container {
+  width: 100%;
+  height: 0;
+  position: relative;
+  display: block;
+  visibility: hidden;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+.app-plan-layout-image,
+.app-plan-layout-inner-content {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.app-plan-layout-image {
+  position: absolute;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.app-plan-layout-inner-content {
+  position: initial;
+}
+
+@media (min-width: 1024px) {
+  :host {
+    padding: 16px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .app-plan-layout-content {
+    border-radius: 16px;
+  }
+}

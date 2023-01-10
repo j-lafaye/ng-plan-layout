@@ -1,0 +1,37 @@
+:host {
+  --app-milestone-scale: 0;
+  --app-milestone-x: 0;
+  --app-milestone-y: 0;
+  width: auto;
+  height: auto;
+  position: absolute;
+  z-index: 0;
+  opacity: 1;
+  transform: scale(var(--app-milestone-scale));
+  transition: opacity 150ms ease-in-out;
+}
+
+:host([x-slot="left"]) {
+  left: var(--app-milestone-x);
+}
+
+:host([x-slot="right"]) {
+  right: var(--app-milestone-x);
+}
+
+:host([y-slot="top"]) {
+  top: var(--app-milestone-y);
+}
+
+:host([y-slot="bottom"]) {
+  bottom: var(--app-milestone-y);
+}
+
+:host(.app-milestone--animated) {
+  opacity: 0;
+  transition: opacity 0ms;
+}
+
+:host(.app-milestone--foregrounded) {
+  z-index: 1;
+}
